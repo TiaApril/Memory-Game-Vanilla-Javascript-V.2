@@ -10,6 +10,14 @@
     background-color: #fbe6a3;
   }
 
+  .text{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:10px;
+    text-align: center;
+  }
+
   .memory-game {
     box-sizing: content-box;
     padding: 2.5em 3em;
