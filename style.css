@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    background-color: #fbe6a3;
+  }
+
+  .memory-game {
+    box-sizing: content-box;
+    padding: 2.5em 3em;
+    background-color: #d4bb32;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+
+  #game-container {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    background-color: bisque;
+  }
+ 
+  
+  .memory-card {
+    /* 25% means it dividies 100 of the display */
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+  }
+
+  .back-face,
+  .front-face {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+    
+  }
+
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
+  .toggleCard {
+    transform: rotateY(180deg);
+  }
